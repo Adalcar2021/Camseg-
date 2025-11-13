@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registrar Mantenimiento - CAMSEG</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body class="bg-light">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="img/logo.png" alt="CAMSEG Logo" width="50" class="me-2">
+        <span class="fw-bold">CAMSEG</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+
+            <li class="nav-item"><a class="nav-link" href="registrar_clientes.html">Clientes</a></li>
+            <li class="nav-item"><a class="nav-link" href="registrar_equipo.html">Equipos</a></li>
+            <li class="nav-item"><a class="nav-link active" href="registrar_mantenimiento.html">Mantenimientos</a></li>
+            <li class="nav-item"><a class="nav-link" href="registrar_tecnico.html">Técnicos</a></li>
+            <li class="nav-item"><a class="nav-link" href="usuarios.html">Usuarios</a></li>
+            <li class="nav-item"><a class="nav-link btn btn-warning text-dark ms-2" href="admin.html">Administrador</a></li>
+
+        </ul>
+    </div>
+</nav>
+
+<!-- CONTENIDO -->
+<div class="container mt-4">
+
+    <h2 class="text-center mb-4">Registro de Mantenimientos</h2>
+
+    <!-- CARD FORMULARIO -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">Información del mantenimiento</h5>
+        </div>
+
+        <div class="card-body">
+
+            <form>
+
+                <div class="row mb-3">
+
+                    <div class="col-md-4">
+                        <label class="form-label">Cliente</label>
+                        <select class="form-select" required>
+                            <option value="">Seleccione</option>
+                            <option>Juan Pérez</option>
+                            <option>María López</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label">Equipo</label>
+                        <select class="form-select" required>
+                            <option value="">Seleccione equipo</option>
+                            <option>Cámara - Hikvision</option>
+                            <option>DVR - Dahua</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label">Técnico asignado</label>
+                        <select class="form-select" required>
+                            <option value="">Seleccione técnico</option>
+                            <option>César López</option>
+                            <option>Ana Torres</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="row mb-3">
+
+                    <div class="col-md-4">
+                        <label class="form-label">Fecha</label>
+                        <input type="date" class="form-control" required>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label">Tipo</label>
+                        <select class="form-select" required>
+                            <option value="">Seleccione</option>
+                            <option>Preventivo</option>
+                            <option>Correctivo</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label">Estado</label>
+                        <select class="form-select" required>
+                            <option>Completado</option>
+                            <option>Pendiente</option>
+                            <option>En proceso</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Descripción del mantenimiento</label>
+                    <textarea class="form-control" rows="3" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-success">
+                    <i class="bi bi-save"></i> Registrar Mantenimiento
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+
+    <!-- TABLA -->
+    <div class="card shadow-sm">
+        <div class="card-header bg-secondary text-white">
+            <h5 class="mb-0">Historial de Mantenimientos</h5>
+        </div>
+
+        <div class="card-body">
+
+            <table class="table table-striped table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Cliente</th>
+                        <th>Equipo</th>
+                        <th>Técnico</th>
+                        <th>Fecha</th>
+                        <th>Tipo</th>
+                        <th>Estado</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Juan Pérez</td>
+                        <td>Cámara Hikvision</td>
+                        <td>César López</td>
+                        <td>2024-02-10</td>
+                        <td>Preventivo</td>
+                        <td>Completado</td>
+                        <td>
+                            <button class="btn btn-warning btn-sm">Editar</button>
+                            <button class="btn btn-danger btn-sm">Eliminar</button>
+                        </td>
+                    </tr>
+
+                    <!-- MÁS REGISTROS -->
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
